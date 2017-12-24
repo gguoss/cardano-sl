@@ -32,7 +32,7 @@ Cardano的设计是分层的，Cardano SL是Cardano平台的第一个组成部�
 
 ### 如何运行Cardano SL 链接主网？
 * 1. 拷贝 可执行文件**cardano-node** 到cardano-sl 目录下
-* 2. 生成topology-mainnet文件，配置如下：
+* 2. 生成topology-mainnet文件./cardano-sl目录下，配置如下：
 ```
   wallet:
     relays: [[{ host: relays.cardano-mainnet.iohk.io }]]
@@ -42,6 +42,6 @@ Cardano的设计是分层的，Cardano SL是Cardano平台的第一个组成部�
  
  * 3. 运行如下启动命令：
  ``` bash
- ./cardano-node --web --no-ntp --configuration-key mainnet_full --tlscert ./scripts/tls-files/server.crt --tlskey ./scripts/tls-files/server.key --tlsca ./scripts/tls-files/ca.crt --log-config ./scripts/log-templates/log-config-qa.yaml --topology "topology-mainnet" --logs-prefix "state-wallet-mainnet/logs" --db-path "state-wallet-mainnet/db" --wallet-db-path 'state-wallet-mainnet/wallet-db'
+ $ ./cardano-node --web --no-ntp --configuration-key mainnet_full --tlscert ./scripts/tls-files/server.crt --tlskey ./scripts/tls-files/server.key --tlsca ./scripts/tls-files/ca.crt --log-config ./scripts/log-templates/log-config-qa.yaml --topology "topology-mainnet" --logs-prefix "state-wallet-mainnet/logs" --db-path "state-wallet-mainnet/db" --wallet-db-path 'state-wallet-mainnet/wallet-db'
  ```
  数据最后都存储在cardano-sl/state-wallet-mainnet
