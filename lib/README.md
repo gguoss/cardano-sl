@@ -11,20 +11,23 @@ Cardano的设计是分层的，Cardano SL是Cardano平台的第一个组成部�
     curl https://nixos.org/nix/install | sh
 
 * 2.在/etc/nix/nix.conf 下增加索引
-
-        $ sudo mkdir -p /etc/nix
+```bash
+        $ sudo mkdir -p /etc/nix
         $ sudo vi /etc/nix/nix.conf       # ..or any other editor, if you prefer
-
+```
     ..如下两行添加到/etc/nix/nix.conf
-
+```
         binary-caches             = https://cache.nixos.org https://hydra.iohk.io
         binary-caches-public-keys = hydra.iohk.io:f/Ea+s+dFdN+3Y/G+FDgSq+a5NEWhJGzdjvKNGv0/EQ=
+```
 * 3.进入nix-shell模式
-
+```bash
         $ nix-shell
-* 4. 编译
-
+```
+* 4.编译
+```
         $ ./scripts/build/cardano-sl.sh
+```        
 编译好后， 所有编译好的组件会在cardano-sl/.stack-work/install/x86_64-linux-nix（体系架构不同，该目录不同）/lts-9.1/8.0.2/bin/ 目录下
 
 ### 如何运行Cardano SL 链接主网？
@@ -35,7 +38,7 @@ Cardano的设计是分层的，Cardano SL是Cardano平台的第一个组成部�
     relays: [[{ host: relays.cardano-mainnet.iohk.io }]]
     valency: 1
     fallbacks: 7
-  ```
+```
  
  * 3. 运行如下启动命令：
  ``` bash
