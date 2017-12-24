@@ -7,9 +7,9 @@ Cardano的设计是分层的，Cardano SL是Cardano平台的第一个组成部�
 ### 如何在nix 模式编译Cardano SL？
 
 * 1.安装 Nix (full instructions at https://nixos.org/nix/download.html)
-
+```bash
     curl https://nixos.org/nix/install | sh
-
+```
 * 2.在/etc/nix/nix.conf 下增加索引
 ```bash
         $ sudo mkdir -p /etc/nix
